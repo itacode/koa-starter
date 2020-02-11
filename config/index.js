@@ -27,4 +27,4 @@ function mergeProperties(target, source) {
   return Object.assign(target, source);
 }
 
-module.exports = init;
+module.exports.config = init;
