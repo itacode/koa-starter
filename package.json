@@ -1,0 +1,32 @@
+{
+  "name": "koa-starter",
+  "version": "1.0.0",
+  "description": "Latest version of Koa.js powered lean template to start building servers",
+  "main": "./bin/www",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node ./bin/www",
+    "dev": "cross-env NODE_ENV=development DEBUG=* nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itacode",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "debug": "^4.1.1",
+    "ejs": "^3.0.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-convert": "^1.2.0",
+    "koa-helmet": "^5.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  }
+}
