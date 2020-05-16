@@ -22,11 +22,11 @@
     "koa-json": "^2.0.2",
     "koa-pino-logger": "^3.0.0",
     "koa-static": "^5.0.0",
-    "koa-views": "^6.2.0"
+    "koa-views": "^6.2.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
     "eslint": "^7.0.0",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   }
 }
