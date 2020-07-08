@@ -11,4 +11,4 @@ function registerAllRoutes(router) {
   registerSearchRoutes(router);
 }
 
-module.exports = router;
+module.exports = { router };

@@ -11,4 +11,4 @@ function registerAllRoutes(router) {
   registerUsersRoutes(router);
 }
 
-module.exports = router;
+module.exports = { router };

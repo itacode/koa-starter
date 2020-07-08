@@ -15,8 +15,8 @@ config();
 
 const logger = require('koa-pino-logger');
 
-const indexRouter = require('./routes');
-const apiRouter = require('./api');
+const indexRouter = require('./routes').router;
+const apiRouter = require('./api').router;
 
 const app = new Koa();
 
