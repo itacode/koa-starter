@@ -1,13 +1,14 @@
 const Router = require('@koa/router');
 const registerSearchRoutes = require('./search/search-routes');
 
-const router = new Router();
+const router = new Router({
+  prefix: '/api',
+});
 
-const routes = getRoutes(router);
+registerAllRoutes(router);
 
-function getRoutes(router) {
+function registerAllRoutes(router) {
   registerSearchRoutes(router);
-  return router;
 }
 
-module.exports = routes;
+module.exports = router;

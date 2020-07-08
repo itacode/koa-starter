@@ -1,21 +1,14 @@
 const Router = require('@koa/router');
+const registerRootRoutes = require('./root/root-routes');
+const registerUsersRoutes = require('./users/users-routes');
 
 const router = new Router();
 
-router.get('/', async (ctx, next) => {
-  await ctx.render('index', {
-    title: 'Hello Koa 2!',
-  });
-});
+registerAllRoutes(router);
 
-router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string';
-});
-
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json',
-  };
-});
+function registerAllRoutes(router) {
+  registerRootRoutes(router);
+  registerUsersRoutes(router);
+}
 
 module.exports = router;

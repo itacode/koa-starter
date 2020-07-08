@@ -10,13 +10,12 @@ const bodyparser = require('koa-bodyparser');
  * Configure environment variables defined in files inside .env.
  * Any module needing env variables must be required after config().
  */
-const config = require('./config/index').config;
+const config = require('./config').config;
 config();
 
 const logger = require('koa-pino-logger');
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require('./routes');
 const apiRouter = require('./api');
 
 const app = new Koa();
@@ -45,11 +44,13 @@ app.use(
 );
 
 /**
- * Routes.
+ * Pages routes.
  */
 app.use(indexRouter.routes()).use(indexRouter.allowedMethods());
-app.use(usersRouter.routes()).use(usersRouter.allowedMethods());
-apiRouter.prefix('/api');
+
+/**
+ * API routes.
+ */
 app.use(apiRouter.routes()).use(apiRouter.allowedMethods());
 
 /**
