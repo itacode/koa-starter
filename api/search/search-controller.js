@@ -1,7 +1,7 @@
-async function index(ctx, next) {
+async function indexGet(ctx, next) {
   ctx.body = {
     title: 'koa2 json',
   };
 }
 
-module.exports.index = index;
+module.exports = { indexGet };

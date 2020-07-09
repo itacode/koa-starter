@@ -1,5 +1,5 @@
 const Router = require('@koa/router');
-const registerSearchRoutes = require('./search/search-routes');
+const registerSearchRoutes = require('./search/search-routes').registerRoutes;
 
 const router = new Router({
   prefix: '/api',

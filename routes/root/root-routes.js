@@ -6,4 +6,4 @@ function registerRoutes(router) {
   router.get('/json', controller.jsonGet);
 }
 
-module.exports = registerRoutes;
+module.exports = { registerRoutes };

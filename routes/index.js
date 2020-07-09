@@ -1,6 +1,6 @@
 const Router = require('@koa/router');
-const registerRootRoutes = require('./root/root-routes');
-const registerUsersRoutes = require('./users/users-routes');
+const registerRootRoutes = require('./root/root-routes').registerRoutes;
+const registerUsersRoutes = require('./users/users-routes').registerRoutes;
 
 const router = new Router();
 

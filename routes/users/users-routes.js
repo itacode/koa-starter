@@ -5,4 +5,4 @@ function registerRoutes(router) {
   router.get('/users/bar', controller.barGet);
 }
 
-module.exports = registerRoutes;
+module.exports = { registerRoutes };
