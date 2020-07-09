@@ -1,5 +1,5 @@
 const production = require('../.env/.env-production').envProduction;
-const development = require('../.env/.env-development').env;
+const development = require('../.env/.env-development').envDevelopment;
 
 function init() {
   const nodeEnv = process.env.NODE_ENV;
