@@ -23,7 +23,8 @@
     "koa-json": "^2.0.2",
     "koa-pino-logger": "^3.0.0",
     "koa-static": "^5.0.0",
-    "koa-views": "^6.3.0"
+    "koa-views": "^6.3.0",
+    "pino": "^6.4.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

@@ -7,6 +7,7 @@ It makes easier start bulding applications to serve static websites and APIs.
 - Environment variables configuration
 - EJS template
 - API router
+- Pino HTTP logger
 - Pino logger
 - Crossenv
 - Nodemon

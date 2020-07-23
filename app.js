@@ -13,7 +13,7 @@ const bodyparser = require('koa-bodyparser');
 const config = require('./config').config;
 config();
 
-const logger = require('koa-pino-logger');
+const pino = require('koa-pino-logger')();
 
 const indexRouter = require('./routes').router;
 const apiRouter = require('./api').router;
@@ -34,7 +34,7 @@ app.use(
   })
 );
 app.use(json());
-app.use(logger());
+app.use(pino);
 app.use(require('koa-static')(__dirname + '/public'));
 
 app.use(
