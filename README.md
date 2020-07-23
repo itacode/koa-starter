@@ -7,9 +7,11 @@ It makes easier start bulding applications to serve static websites and APIs.
 - Environment variables configuration
 - EJS template
 - API router
+- Pino logger
 - Crossenv
 - Nodemon
 - ESLint
+- Jest testing framework
 
 The basic environment configuration is applied by the module `config`, through merging variables defined in the files inside `.env` directory with node environment ones.
 - If `NODE_ENV` is undefined or equal to `"production"` then `.env-production.js` is used in merging and `NODE_ENV` is set to `"production"`
