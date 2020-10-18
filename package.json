@@ -24,13 +24,13 @@
     "koa-pino-logger": "^3.0.0",
     "koa-static": "^5.0.0",
     "koa-views": "^6.3.1",
-    "pino": "^6.6.1"
+    "pino": "^6.7.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "eslint": "^7.10.0",
-    "jest": "^26.5.0",
+    "eslint": "^7.11.0",
+    "jest": "^26.5.3",
     "nock": "^13.0.4",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.5"
   }
 }
