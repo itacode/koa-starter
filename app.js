@@ -6,13 +6,6 @@ const views = require('koa-views');
 const json = require('koa-json');
 const bodyparser = require('koa-bodyparser');
 
-/**
- * Configure environment variables defined in files inside .env.
- * Any module needing env variables must be required after config().
- */
-const config = require('./config').config;
-config();
-
 const pino = require('koa-pino-logger')();
 
 const indexRouter = require('./routes').router;

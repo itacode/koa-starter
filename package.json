@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node ./bin/www",
-    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
-    "dev:debug": "cross-env NODE_ENV=development DEBUG=* nodemon ./bin/www",
+    "dev": "cross-env PLATFORM=development nodemon ./bin/www | pino-pretty",
+    "dev:debug": "cross-env PLATFORM=development DEBUG=* nodemon ./bin/www | pino-pretty",
     "test": "jest --passWithNoTests"
   },
   "author": "itacode",
@@ -16,6 +16,7 @@
     "@koa/router": "^10.0.0",
     "axios": "^0.21.1",
     "debug": "^4.3.1",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
@@ -31,6 +32,7 @@
     "eslint": "^7.20.0",
     "jest": "^27.0.1",
     "nock": "^13.0.7",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^7.0.1"
   }
 }

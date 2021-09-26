@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+const loadEnv = require('../env').loadEnv;
+loadEnv();
+
 /**
  * Module dependencies.
  */
@@ -12,7 +15,7 @@ var http = require('http');
  * Get port from environment.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.APP_PORT || '3000');
 
 /**
  * Create HTTP server.
