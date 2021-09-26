@@ -28,6 +28,7 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 - Circuit Breaker
 - Pino HTTP logger
 - Pino logger
+- Dotenv
 - Crossenv
 - Nodemon
 - ESLint
