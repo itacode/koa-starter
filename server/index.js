@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const loadEnv = require('../env').loadEnv;
+const loadEnv = require('./common/env').loadEnv;
 loadEnv();
 
 /**
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./common/server');
 var debug = require('debug')('demo:server');
 var http = require('http');
 

@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const Koa = require('koa');
 const helmet = require('koa-helmet');
 const views = require('koa-views');
@@ -8,8 +9,8 @@ const bodyparser = require('koa-bodyparser');
 
 const pino = require('koa-pino-logger')();
 
-const indexRouter = require('./routes').router;
-const apiRouter = require('./api').router;
+const indexRouter = require('../routes').router;
+const apiRouter = require('../api').router;
 
 const app = new Koa();
 
@@ -28,10 +29,10 @@ app.use(
 );
 app.use(json());
 app.use(pino);
-app.use(require('koa-static')(__dirname + '/public'));
+app.use(require('koa-static')(path.join(__dirname, '../../public')));
 
 app.use(
-  views(__dirname + '/views', {
+  views(path.join(__dirname, '../views'), {
     extension: 'ejs',
   })
 );
