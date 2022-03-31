@@ -2,6 +2,8 @@
 .env.local
 .env.*.local
 
+dist
+
 # Created by https://www.gitignore.io/api/node,sass,macos,windows,sublimetext,dreamweaver,visualstudiocode
 
 ### Dreamweaver ###

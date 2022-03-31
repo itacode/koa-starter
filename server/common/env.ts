@@ -1,5 +1,5 @@
-const path = require('path');
-const dotenv = require('dotenv');
+import path from 'path';
+import dotenv from 'dotenv';
 
 /**
  * Load environment variables from .env* files
@@ -28,4 +28,4 @@ function loadEnv() {
   dotenv.config();
 }
 
-module.exports = { loadEnv };
+export { loadEnv };
