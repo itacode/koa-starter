@@ -1,9 +1,9 @@
 # koa-starter
-This is a basic template powered by the latest version of Koa.js.
-It makes easier start bulding applications to serve static websites and APIs.
+Basic scaffold to start a TypeScript Koa.js microservice.
 
-## Platforms and Environment Variables
-### Platforms
+## Platform and Environment Variables
+
+### Platform
 **Platform** is a way to specify an environment file to be loaded by `dotenv`.  
 For example if you want `.env.production` to be loaded, you need to set `PLATFORM=production` env variable before starting the app. If you don't set `PLATFORM`, it defaults to `production`.
 
@@ -22,6 +22,8 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 
 ## Features
 
+- Koa.js
+- TypeScript
 - Environment variables configuration
 - EJS template
 - API router
@@ -33,3 +35,40 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 - Nodemon
 - ESLint
 - Jest testing framework
+- Docker
+
+## Installation
+
+```shell
+npm install
+```
+
+## Development server
+
+Start the development server with automatic reload.
+
+```shell
+npm run dev
+```
+
+## Production server
+
+```shell
+npm run compile
+npm start
+```
+
+## Docker
+
+Start
+
+```shell
+docker-compose up -d --build
+```
+
+Stop
+
+```shell
+docker-compose down
+```
+
