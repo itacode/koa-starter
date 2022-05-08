@@ -4,7 +4,7 @@
   "description": "Latest version of Koa.js powered lean template to start building servers",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint ./server/ --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./server/",
     "start": "node ./dist/index.js",
     "compile": "rimraf ./dist && tsc && copyfiles -u 1 ./server/views/* ./dist/",
     "dev": "cross-env PLATFORM=development nodemon ./server/index.ts | pino-pretty",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@koa/router": "^10.1.1",
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
@@ -43,11 +43,13 @@
     "copyfiles": "^2.4.1",
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
-    "jest": "^27.5.1",
+    "jest": "^28.1.0",
     "nock": "^13.2.4",
     "nodemon": "^2.0.15",
     "pino-pretty": "^7.6.0",
-    "ts-jest": "^27.1.4",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   }
