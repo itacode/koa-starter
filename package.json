@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./server/",
     "start": "node ./dist/index.js",
-    "compile": "rimraf ./dist && tsc && copyfiles -u 1 ./server/views/* ./dist/",
+    "build": "rimraf ./dist && tsc && copyfiles -u 1 ./server/views/* ./dist/",
     "dev": "cross-env PLATFORM=development nodemon ./server/index.ts | pino-pretty",
     "dev:debug": "cross-env PLATFORM=development DEBUG=* nodemon --exec \"node -r ts-node/register --inspect-brk\" server/index.ts | pino-pretty",
     "test": "jest --passWithNoTests"
