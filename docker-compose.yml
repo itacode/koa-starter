@@ -11,8 +11,7 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    networks:
-      - backend
 
 networks:
-  backend:
+  default:
+    name: backend
