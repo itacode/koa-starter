@@ -1,6 +1,5 @@
 import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import globals from 'globals';
 import typescriptEslint from 'typescript-eslint';
 
 export default [
@@ -9,15 +8,6 @@ export default [
   eslintConfigPrettier,
   {
     files: ['**/*.js', '**/*.ts', '**/*.tsx'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.jquery,
-        ...globals.jest,
-      },
-    },
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
