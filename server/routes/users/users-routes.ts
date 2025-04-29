@@ -1,5 +1,5 @@
 import Router from '@koa/router';
-import { indexGet, barGet } from './users-controller';
+import { barGet, indexGet } from './users-controller';
 
 function registerRoutes(router: Router) {
   router.get('/users', indexGet);

@@ -8,4 +8,4 @@ async function barGet(ctx: Context) {
   ctx.body = 'bar';
 }
 
-export { indexGet, barGet };
+export { barGet, indexGet };

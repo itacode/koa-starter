@@ -1,16 +1,17 @@
 'use strict';
 
-import path from 'path';
 import Koa from 'koa';
-import helmet from 'koa-helmet';
-import views from 'koa-views';
-import json from 'koa-json';
 import bodyparser from 'koa-bodyparser';
+import helmet from 'koa-helmet';
+import json from 'koa-json';
 import koaPinoLogger from 'koa-pino-logger';
 import koaStatic from 'koa-static';
+// import views from 'koa-views';
+import views from '@ladjs/koa-views';
+import path from 'path';
 
-import { router as indexRouter } from './routes';
 import { router as apiRouter } from './api';
+import { router as indexRouter } from './routes';
 
 function newApp() {
   const pino = koaPinoLogger();
@@ -27,17 +28,19 @@ function newApp() {
   app.use(
     bodyparser({
       enableTypes: ['json', 'form', 'text'],
-    })
+    }),
   );
   app.use(json());
   app.use(pino);
   app.use(koaStatic(path.join(__dirname, '../public')));
 
-  app.use(
-    views(path.join(__dirname, './views'), {
-      extension: 'ejs',
-    })
-  );
+  const render = views(__dirname + '/views', {
+    map: {
+      html: 'ejs',
+    },
+  });
+  // Must be used before any router is used
+  app.use(render);
 
   /**
    * Pages routes.

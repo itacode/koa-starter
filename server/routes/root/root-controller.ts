@@ -16,4 +16,5 @@ async function jsonGet(ctx: Context) {
   };
 }
 
-export { indexGet, stringGet, jsonGet };
+export { indexGet, jsonGet, stringGet };
+
