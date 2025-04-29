@@ -13,7 +13,6 @@
   },
   "author": "itacode",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@koa/router": "^13.1.0",
     "@ladjs/koa-views": "^9.0.0",
