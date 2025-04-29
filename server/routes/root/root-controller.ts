@@ -2,17 +2,17 @@ import { Context } from 'koa';
 
 async function indexGet(ctx: Context) {
   await ctx.render('index', {
-    title: 'Hello Koa 2!',
+    title: 'Hello Koa!',
   });
 }
 
 async function stringGet(ctx: Context) {
-  ctx.body = 'koa2 string';
+  ctx.body = 'koa string';
 }
 
 async function jsonGet(ctx: Context) {
   ctx.body = {
-    title: 'koa2 json',
+    title: 'koa json',
   };
 }
 
