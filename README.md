@@ -27,7 +27,6 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 - Environment variables configuration
 - EJS template
 - API router
-- Circuit Breaker
 - Pino HTTP logger
 - Pino logger
 - Dotenv
@@ -54,7 +53,7 @@ npm run dev
 ## Production server
 
 ```shell
-npm run compile
+npm run build
 npm start
 ```
 
@@ -63,12 +62,12 @@ npm start
 Start
 
 ```shell
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 Stop
 
 ```shell
-docker-compose down
+docker compose down
 ```
 
