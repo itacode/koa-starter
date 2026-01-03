@@ -1,12 +1,13 @@
-import Router from '@koa/router';
+import Router, { RouterWithMethods } from '@koa/router';
 import { registerRoutes as registerRootRoutes } from './root/root-routes';
 import { registerRoutes as registerUsersRoutes } from './users/users-routes';
+import { DefaultState, DefaultContext } from 'koa';
 
-const router = new Router();
+const router = new Router({});
 
 registerAllRoutes(router);
 
-function registerAllRoutes(router: Router) {
+function registerAllRoutes(router: RouterWithMethods<string, DefaultState, DefaultContext>) {
   registerRootRoutes(router);
   registerUsersRoutes(router);
 }

@@ -34,11 +34,7 @@ function newApp() {
   app.use(pino);
   app.use(koaStatic(path.join(__dirname, '../public')));
 
-  const render = views(__dirname + '/views', {
-    map: {
-      html: 'ejs',
-    },
-  });
+  const render = views(__dirname + '/views', { extension: 'ejs' });
   // Must be used before any router is used
   app.use(render);
 
