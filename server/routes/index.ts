@@ -7,7 +7,9 @@ const router = new Router({});
 
 registerAllRoutes(router);
 
-function registerAllRoutes(router: RouterWithMethods<string, DefaultState, DefaultContext>) {
+function registerAllRoutes(
+  router: RouterWithMethods<string, DefaultState, DefaultContext>,
+) {
   registerRootRoutes(router);
   registerUsersRoutes(router);
 }
