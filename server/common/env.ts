@@ -7,10 +7,8 @@ import path from 'path';
 function loadEnv() {
   // Adopt this convention https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
   // Inspired by https://pkg.go.dev/github.com/joho/godotenv#readme-precedence-conventions
-  let appEnv = process.env.PLATFORM;
-  if (!appEnv) {
-    appEnv = 'production';
-  }
+  // Use PLATFORM to specify the configuration profile, otherwise fallback to NODE_ENV
+  const appEnv = process.env.PLATFORM || process.env.NODE_ENV || 'production';
 
   dotenv.config({
     path: path.resolve(process.cwd(), `.env.${appEnv}.local`),
