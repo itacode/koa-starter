@@ -38,12 +38,11 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 - Environment variables configuration
 - EJS template
 - API router
-- Pino HTTP logger
 - Pino logger
 - Dotenv
-- Crossenv
-- Nodemon
+- Node.js native watch
 - ESLint
+- Prettier
 - Jest testing framework
 - Docker
 
@@ -55,7 +54,7 @@ npm install
 
 ## Development server
 
-Start the development server with automatic reload.
+Run the development server with automatic restart
 
 ```shell
 npm run dev
