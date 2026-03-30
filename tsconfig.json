@@ -8,6 +8,7 @@
     "declaration": true,
     "sourceMap": true,
     "outDir": "./dist",
+    "rootDir": "./server",
     "removeComments": true,
     "newLine": "lf",
     "pretty": true,
