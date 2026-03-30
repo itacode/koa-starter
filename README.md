@@ -13,7 +13,7 @@ The application determines the configuration profile by checking variables in th
 2. `NODE_ENV`
 3. Default: `production`
 
-For example, if you run `npm run dev` (which sets `NODE_ENV=development`), `.env.development` will be loaded automatically. You can override this by setting `PLATFORM` explicitly (e.g., `PLATFORM=staging`).
+For example, if you run `pnpm dev` (which sets `NODE_ENV=development`), `.env.development` will be loaded automatically. You can override this by setting `PLATFORM` explicitly (e.g., `PLATFORM=staging`).
 
 ### Environment Variables
 
@@ -49,7 +49,7 @@ This [convention](https://github.com/bkeepers/dotenv#what-other-env-files-can-i-
 ## Installation
 
 ```shell
-npm install
+pnpm install
 ```
 
 ## Development server
@@ -57,14 +57,14 @@ npm install
 Run the development server with automatic restart
 
 ```shell
-npm run dev
+pnpm dev
 ```
 
 ## Production server
 
 ```shell
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 ## Docker
