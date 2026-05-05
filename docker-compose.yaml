@@ -1,13 +1,11 @@
-
 services:
   app:
     build:
       context: .
-      # dockerfile: ./docker/Dockerfile
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
 networks:
   default:
