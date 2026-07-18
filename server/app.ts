@@ -1,13 +1,13 @@
 'use strict';
 
+// import views from 'koa-views';
+import views from '@ladjs/koa-views';
 import Koa from 'koa';
 import bodyparser from 'koa-bodyparser';
 import helmet from 'koa-helmet';
 import json from 'koa-json';
 import koaPinoLogger from 'koa-pino-logger';
 import koaStatic from 'koa-static';
-// import views from 'koa-views';
-import views from '@ladjs/koa-views';
 import path from 'path';
 
 import { router as apiRouter } from './api';

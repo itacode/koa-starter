@@ -2,6 +2,7 @@
 'use strict';
 
 import http from 'http';
+
 import { newApp } from './app';
 import { loadEnv } from './common/env';
 import { logger } from './common/logger';

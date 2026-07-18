@@ -1,7 +1,8 @@
 import Router, { RouterWithMethods } from '@koa/router';
+import { DefaultContext, DefaultState } from 'koa';
+
 import { registerRoutes as registerRootRoutes } from './root/root-routes';
 import { registerRoutes as registerUsersRoutes } from './users/users-routes';
-import { DefaultState, DefaultContext } from 'koa';
 
 const router = new Router({});
 
